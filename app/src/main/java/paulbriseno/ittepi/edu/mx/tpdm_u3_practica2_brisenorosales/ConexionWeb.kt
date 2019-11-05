@@ -7,10 +7,10 @@ import java.io.BufferedOutputStream
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
-import java.lang.UnsupportedOperationException
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
+import java.lang.UnsupportedOperationException as UnsupportedOperationException1
 
 class ConexionWeb (p: MainActivity) : AsyncTask<URL, Void, String >() {
 
@@ -38,7 +38,7 @@ class ConexionWeb (p: MainActivity) : AsyncTask<URL, Void, String >() {
                 var data = variablesEnvio.get(it).split("&")
                 cadenaEnvioPOST += data[0] + "=" + URLEncoder.encode(data[1], "utf-8" + " " )
 
-            }catch (err:UnsupportedOperationException){
+            }catch (err: UnsupportedOperationException1){
                 respuesta = "ERROR EN CONDIFICACION URL"
             }
         }
